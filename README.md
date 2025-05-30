@@ -3,9 +3,9 @@
 ## 1. Compare the application logs before and after you exposed it as a Service. Try to open the app several times while the proxy into the Service is running. What do you see in the logs? Does the number of logs increase each time you open the app?
 
 ### Before application exposed as a Service
-![alt text](image.png)
+![alt text](images/image.png)
 ### After application exposed as a Service
-![alt text](image-1.png)
+![alt text](images/image-1.png)
 
 Dari sini dapat disimpulkan bahwa jumlah logs bertambah setiap kali membuka app karena setiap request disimpan ke logs pod.
 
@@ -22,17 +22,17 @@ Dalam Kubernetes, strategi Recreate akan mematikan semua pod versi lama sebelum 
 ## 2. Try deploying the Spring Petclinic REST using Recreate deployment strategy and document your attempt.
 
 Deploying dengan mengubah strategy type "Recreate" dan rollingUpdate menjadi null
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
 Update versi dan informasi pods bahwa semua replica langsung dilakukan Terminate dan membuat replica baru dengan versi yang di update.
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
-![alt text](image-4.png)
+![alt text](images/image-4.png)
 
 ## 3. Prepare different manifest files for executing Recreate deployment strategy.
 
 Mendapatkan deploymeny dan service manifest
-![alt text](image-5.png)
+![alt text](images/image-5.png)
 
 ## 4. What do you think are the benefits of using Kubernetes manifest files? Recall your experience in deploying the app manually and compare it to your experience when deploying the same app by applying the manifest files (i.e., invoking `kubectl apply -f` command) to the cluster.
 
